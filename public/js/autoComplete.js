@@ -9,6 +9,12 @@
 // });
 
 $(document).ready(function () {
-   $('#addFriend').click(function () {
-   })
+
+   $('.addFriend').click(function () {
+       $(this).toggleClass('btn-warning').text($(this).text() === 'Add Friend' ? 'Requested' : 'Add Friend');
+       console.log($(this).attr('data-id'))
+   });
+
+
+
 });

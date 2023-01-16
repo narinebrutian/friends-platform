@@ -34,8 +34,12 @@
                                 <th scope="row">{{ $user->id }}</th>
                                 <td>{{ $user->name}}</td>
                                 <td>
-                                    <button id="addFriend" class="btn btn-outline-success"><span>&#43; &nbsp;</span>Add Friend</button>
-                                    <button id="viewProfile" class="btn btn-outline-primary">View Profile</button>
+                                    <a href="#" style="text-decoration: none;">
+                                        <button type="button" class="btn btn-success addFriend" data-id="{{ $user->id }}">Add Friend</button>
+                                    </a>
+                                    <a href="#" style="text-decoration: none;">
+                                        <button type="button" class="btn btn-primary viewProfile" data-id="{{ $user->id }}">View Profile</button>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
